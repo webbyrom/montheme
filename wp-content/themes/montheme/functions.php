@@ -33,6 +33,28 @@ function montheme_menu_link_class($attrs)
     $attrs['class'] = 'nav-link';
     return $attrs;
 }
+function montheme_pagination() /* création de la fonction pour la pagination**/
+{
+    $pages = paginate_links(['type' => 'array']);/* variable contenant la declaration wordpress pagiantion*/
+    if ($pages === null) {/*  pour éviter les erreurs si un seul articles*/
+        return;
+    }
+    echo '<nav aria-label="Pagination" class="my-4">';
+    echo '<ul class="pagination">';
+
+    foreach ($pages as $page) {
+        $active = strpos($page, 'current') !== false;
+        $class = 'page-item';
+        if ($active) {
+            $class .= ' active';
+        }
+        echo '<li class="' . $class . '">';
+        echo str_replace('page-numbers', 'page-link', $page);
+        echo '</li>';
+    }
+    echo '</ul>';
+    echo '</nav>';
+}
 
 add_action('after_setup_theme', 'montheme_supports');/* pour utiliser la function montheme_supports()*/
 add_action('wp_enqueue_scripts', 'montheme_register_assets');/* pour utiliser la function montheme_register_assets()*/
