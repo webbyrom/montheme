@@ -7,6 +7,7 @@ function montheme_supports()
     add_theme_support('menus');
     register_nav_menu('header', 'en tête du menu');
     register_nav_menu('footer', 'menu footer');
+    add_image_size('post_thumbnail', 350, 215, true);/* taille image souhaitée, 350*215 true = cropage ( mise à l'échelle/centrage) ***/
 }
 function montheme_register_assets()
 {
@@ -33,10 +34,10 @@ function montheme_menu_link_class($attrs)
     $attrs['class'] = 'nav-link';
     return $attrs;
 }
-function montheme_pagination() /* création de la fonction pour la pagination**/
+function montheme_pagination() /* création de la fonction pour la pagination **/
 {
-    $pages = paginate_links(['type' => 'array']);/* variable contenant la declaration wordpress pagiantion*/
-    if ($pages === null) {/*  pour éviter les erreurs si un seul articles*/
+    $pages = paginate_links(['type' => 'array']);/* variable contenant la declaration wordpress pagiantion */
+    if ($pages === null) {/*  pour éviter les erreurs si un seul articles */
         return;
     }
     echo '<nav aria-label="Pagination" class="my-4">';
@@ -56,8 +57,22 @@ function montheme_pagination() /* création de la fonction pour la pagination**/
     echo '</nav>';
 }
 
+function montheme_add_custom_box () {
+    add_meta_box('montheme_sponso', 'Sponsoring', 'montheme_render_sponso_box', 'post', 'side');
+}
+
+function montheme_render_sponso_box () {
+    ?>
+    <input type="hidden" value="0" name="montheme_sponso">
+    <input type="checkbox" value="1" name="montheme_sponso">
+    <label for="monthemesponso"> Cet article est sponsorisé ?</label>
+    <?php
+
+}
+
 add_action('after_setup_theme', 'montheme_supports');/* pour utiliser la function montheme_supports()*/
 add_action('wp_enqueue_scripts', 'montheme_register_assets');/* pour utiliser la function montheme_register_assets()*/
 add_filter('wp_title', 'montheme_title');
 add_filter('nav_menu_css_class', 'montheme_menu_class');
 add_filter('nav_menu_link_attributes', 'montheme_menu_link_class');
+add_action('add_meta_boxes', 'montheme_add_custom_box');/* meta donnée au niveau des articles ***/
