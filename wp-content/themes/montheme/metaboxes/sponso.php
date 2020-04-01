@@ -22,7 +22,6 @@ class SponsoMetaBox
     {
         $value = get_post_meta($post->ID, self::META_KEY, true);
         wp_nonce_field(self::NONCE, self::NONCE);
-
         ?>
         <input type="hidden" value="0" name="<?= self::META_KEY ?>">
         <input type="checkbox" value="1" name="<?= self::META_KEY ?>" <?php checked($value, '1') ?>>
