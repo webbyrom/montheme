@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.4.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-01 10:47:01+0000\n"
+"PO-Revision-Date: 2020-04-01 20:54:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -150,15 +150,15 @@ msgstr "Et si vous avez déjà pensé que votre image dans le bloc Média+Texte 
 
 #: wp-admin/about.php:93
 msgid "Guess a whole lot less! Version 5.4 streamlines the whole process for placing and replacing multimedia in every block. Now it works the same way in almost every block!"
-msgstr "Beaucoup moins, je suppose ! La version 5.4 rationalise l'ensemble du processus de placement et de remplacement de média dans chaque bloc. Elle fonctionne désormais de la même manière dans presque tous les blocs !"
+msgstr "Bien moins, je suppose ! La version 5.4 rationalise l’ensemble du processus de placement et de remplacement de média dans chaque bloc. Elle fonctionne désormais de la même manière dans presque tous les blocs !"
 
 #: wp-admin/about.php:92
 msgid "New ways with color: Gradients in the Buttons and Cover block, toolbar access to color options in Rich Text blocks, and for the first time, color options in the Group and Columns blocks."
-msgstr "De nouvelles façons d'utiliser la couleur : Dégradés dans les blocs des boutons et de couverture, accès par la barre d’outils aux options de couleur dans les blocs de texte enrichi, et pour la première fois, options de couleur dans les blocs de groupe et de colonnes."
+msgstr "De nouvelles façons d'utiliser la couleur : dégradés dans les blocs des boutons et de couverture, accès par la barre d’outils aux options de couleur dans les blocs de texte enrichi, et pour la première fois, options de couleur dans les blocs de groupe et de colonnes."
 
 #: wp-admin/about.php:91
 msgid "Two brand-new blocks: Social Icons and Buttons make adding interactive features fast and easy."
-msgstr "Deux blocs tout neufs : Les liens sociaux et les boutons rendent rapide et facile l’ajout de fonctionnalités interactives."
+msgstr "Deux blocs tout neufs : les icônes sociales et les boutons rendent rapide et facile l’ajout de fonctionnalités interactives."
 
 #: wp-admin/about.php:89
 msgid "Two new blocks. And better blocks overall."
